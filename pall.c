@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void _pall(stackt_t **stack, unsigned int line_number)
+void _pall(stack_t **stack, unsigned int line_number)
 {
     (void)line_number;
     stackt_t *temp = *stack;

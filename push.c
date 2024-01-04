@@ -1,11 +1,11 @@
 #include "monty.h"
 
-void _push(stackt_t **stack, unsigned int line_number)
+void _push(stack_t **stack, unsigned int line_number)
 {
-    stackt_t *new node = malloc(sizeof(stackt_t));
+    stack_t *new_node = malloc(sizeof(stack_t));
     (void)line_number;
 
-    if (new_ node == NULL)
+    if (new_node == NULL)
     {
         fprintf(stderr, "Error: malloc failed\n");
         exit(EXIT_FAILURE);
@@ -15,7 +15,7 @@ void _push(stackt_t **stack, unsigned int line_number)
     new_node->prev = NULL;
     new_node->next = *stack;
 
-    if (*stack =! NULL)
+    if (*stack != NULL)
         (*stack)->prev = new_node;
 
     *stack = new_node;

@@ -5,7 +5,7 @@
  * Return: (combo[i].print)
  */
 
-void (*get_function(char opcode))(stack_t **stack, unsigned int line_number)
+void (*get_function(char *opcode))(stack_t **stack, unsigned int line_number)
 {
 	int i = 0;
 	instruction_t combo[] = {
@@ -15,7 +15,7 @@ void (*get_function(char opcode))(stack_t **stack, unsigned int line_number)
 	};
 	while (combo[i].opcode)
 	{
-		if (strcmp(combo[i].opcode), opcode == 0)
+		if (strcmp(combo[i].opcode, opcode) == 0)
 			return (combo[i].f);
 		i++;
 	}
