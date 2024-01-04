@@ -11,7 +11,7 @@ void _push(stack_t **stack, unsigned int line_number)
         exit(EXIT_FAILURE);
     }
 
-    new_node->n = value;
+    new_node->n = 3;
     new_node->prev = NULL;
     new_node->next = *stack;
 
